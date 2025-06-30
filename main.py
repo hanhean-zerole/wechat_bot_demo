@@ -10,6 +10,14 @@ from wxauto.msgs import FriendMessage, TickleMessage, SystemMessage
 GROUP_NAME="机器人测试"
 BOT_NAME="韩和安"
 
+
+def be_crazy(num):
+    crazy_flag = random.randint(1, num)
+    if crazy_flag == 1:
+        return True
+    return False
+
+
 def get_command(text):
     pattern = re.compile(rf'@{BOT_NAME} *')
     obj=pattern.match(text)
@@ -20,6 +28,7 @@ def get_command(text):
         command=text[len(to_remove):].lstrip()
         print(command)
         return command
+
 
 def command_process(text):
     text=str(text)
@@ -38,20 +47,18 @@ def command_process(text):
 
 
 def help():
-    crazy_flag = random.randint(1, 5)
-    if crazy_flag == 1:
+    if be_crazy(5):
         return f"你这有机体好笨( ˃ ⤙ ˂)"
     return f"病友你坏，我是院内的机仆，ID为{BOT_NAME}，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。\n" \
            f"我目前支持的功能有：\n" \
-           f"1.抽签，发送“@{BOT_NAME} 抽签 A选项 B选项 C选项”试一试\n" \
-           f"2.大狗叫，发送“@{BOT_NAME} 大狗叫 任意一句话”，我会把这句话变成汪汪汪\n" \
+           f"1.抽签，发送“@{BOT_NAME}    抽签    A选项    B选项    C选项”试一试\n" \
+           f"2.大狗叫，发送“@{BOT_NAME}    大狗叫    任意一句话”，我会把这句话变成汪汪汪\n" \
            f"拍一拍我的芯片可能有惊喜哦（）"
 
 
 def chouqian(options):
-    crazy_flag = random.randint(1, 10)
-    if crazy_flag == 1:
-        return f"钝角"
+    if be_crazy(10):
+        return f"抽签结果：钝角"
     if len(options)>1:
         choose = random.choice(options[1:])
         return "抽签结果：" + choose
@@ -67,18 +74,15 @@ def bark(strs):
         result = pattern.sub('汪', strs[i+1])
         ans += result
         ans += ' '
-    crazy_flag = random.randint(1, 10)
-    if crazy_flag == 1:
+    if be_crazy(10):
         return f"狗狗不是很想叫……"
     return ans
 
 def IQ(msg):
     upIQ=random.randint(1,6)
     match = re.search(r'"([^"]*)" 拍了拍我的芯片，智慧\+1d6', msg.content)
-    # match = re.search(r'"([^"]*)" 拍了拍我.*', msg.content)
     user = match.group(1)
-    flag = random.randint(1, 10)
-    if flag == 1:
+    if be_crazy(10):
         return {"text": f"在拍芯片时用力过猛，被电到了，智慧-{upIQ}", "user": user, "flag": True}
     return {"text": f"1d6={upIQ},智慧＋{upIQ}", "user": user, "flag": False}
 
@@ -108,8 +112,7 @@ def test_group_message(msg, chat):
     if isinstance(msg,TickleMessage):#拍一拍加智慧
         ret = IQ(msg)
         time.sleep(0.7)
-        anti_flag = random.randint(1, 20)
-        if anti_flag == 1:
+        if be_crazy(20):
             chat.SendMsg(msg="讨厌你，你不要碰我（▼へ▼メ）", who=GROUP_NAME, at=ret['user'])
             return
         chat.SendMsg(msg=ret['text'], who=GROUP_NAME, at=ret['user'])
@@ -129,9 +132,7 @@ def test_group_message(msg, chat):
 ############################################################################
     if isinstance(msg, SystemMessage):
         user = invited_person(msg.content)
-
-        crazy_flag = random.randint(1, 5)
-        if crazy_flag == 1:
+        if be_crazy(5):
             chat.SendMsg(msg=f"不给自己编号的，病号不是自然数的，跟已有病号重复的病人滚粗病院！(╯>д<)╯⁽˙³˙⁾", who=GROUP_NAME, at=user)
         chat.SendMsg(msg=f"乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。\n病号必须为自然数，且不能和已有病号重复。", who=GROUP_NAME, at=user)
 
