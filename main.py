@@ -49,6 +49,9 @@ def help():
 
 
 def chouqian(options):
+    crazy_flag = random.randint(1, 10)
+    if crazy_flag == 1:
+        return f"钝角"
     if len(options)>1:
         choose = random.choice(options[1:])
         return "抽签结果：" + choose
@@ -64,6 +67,9 @@ def bark(strs):
         result = pattern.sub('汪', strs[i+1])
         ans += result
         ans += ' '
+    crazy_flag = random.randint(1, 10)
+    if crazy_flag == 1:
+        return f"狗狗不是很想叫……"
     return ans
 
 def IQ(msg):
