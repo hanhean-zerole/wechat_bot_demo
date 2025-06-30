@@ -498,3 +498,4 @@ ValueError: 无法从文本中提取邀请信息
 ValueError: 无法从文本中提取邀请信息
 
 2025-06-30 13:21:27 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描"郭一坤"分享的二维码加入群聊
+2025-06-30 13:22:59 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
