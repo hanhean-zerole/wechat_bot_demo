@@ -339,3 +339,162 @@ AttributeError: 'NoneType' object has no attribute 'group'
 引用  的消息 : @院内自助设施 大狗叫 人民是基石，将军是支柱
 2025-06-30 11:44:01 [wxauto] [DEBUG] [wx.py:205]  [tickle base]获取到新消息：机器人测试 - [1条]"韩和安" 拍了拍我的芯片，智慧＋1d6
 2025-06-30 11:46:47 [wxauto] [DEBUG] [wx.py:339]  wxauto("天山") shutdown
+2025-06-30 13:13:43 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 13:13:43 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 13:13:45 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 13:13:45 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 13:13:46 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 13:14:36 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:14:37 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:14:37 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描你分享的二维码加入群聊  
+2025-06-30 13:14:37 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:15:54 [wxauto] [DEBUG] [msg.py:79]  content: @平森farhād @Shmilyᝰ. 发个测试群的二维码, length: 8
+2025-06-30 13:15:54 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - @平森farhād @Shmilyᝰ. 发个测试群的二维码
+2025-06-30 13:16:28 [wxauto] [DEBUG] [msg.py:79]  content: 啥？, length: 10
+2025-06-30 13:16:28 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:16:28 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:16:28 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 啥？
+2025-06-30 13:16:36 [wxauto] [DEBUG] [msg.py:79]  content: 这个群的, length: 8
+2025-06-30 13:16:36 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 这个群的
+2025-06-30 13:16:42 [wxauto] [DEBUG] [msg.py:79]  content: 拉人二维码, length: 8
+2025-06-30 13:16:42 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 拉人二维码
+2025-06-30 13:16:49 [wxauto] [DEBUG] [msg.py:79]  content: 我搞个自动欢迎, length: 8
+2025-06-30 13:16:49 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 我搞个自动欢迎
+2025-06-30 13:16:52 [wxauto] [DEBUG] [msg.py:79]  content: [图片], length: 11
+2025-06-30 13:16:52 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:16:53 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:16:53 [wxauto] [DEBUG] [wx.py:205]  [friend image]获取到新消息：机器人测试 - [图片]
+2025-06-30 13:17:00 [wxauto] [DEBUG] [msg.py:79]  content: [图片], length: 11
+2025-06-30 13:17:00 [wxauto] [DEBUG] [wx.py:205]  [friend image]获取到新消息：机器人测试 - [图片]
+2025-06-30 13:17:13 [wxauto] [DEBUG] [msg.py:79]  content: OK, length: 8
+2025-06-30 13:17:13 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - OK
+2025-06-30 13:17:42 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:17:42 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:17:42 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描"李冠霖"分享的二维码加入群聊
+2025-06-30 13:17:48 [wxauto] [DEBUG] [msg.py:79]  content: @七月 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复, length: 8
+2025-06-30 13:17:48 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - @七月 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复
+2025-06-30 13:18:23 [wxauto] [DEBUG] [msg.py:79]  content: 重复后面的句号呢, length: 10
+2025-06-30 13:18:23 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:18:23 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:18:23 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 重复后面的句号呢
+2025-06-30 13:18:35 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:18:35 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:18:35 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描"李冠霖"分享的二维码加入群聊
+2025-06-30 13:18:39 [wxauto] [DEBUG] [msg.py:79]  content: @七月 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复, length: 8
+2025-06-30 13:18:39 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - @七月 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复
+2025-06-30 13:18:41 [wxauto] [DEBUG] [msg.py:79]  content: 你还要给出院内已有的病号, length: 10
+2025-06-30 13:18:41 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 你还要给出院内已有的病号
+2025-06-30 13:18:49 [wxauto] [DEBUG] [msg.py:79]  content: 这个很难
+引用  的消息 : 你还要给出院内已有的病号, length: 20
+2025-06-30 13:18:49 [wxauto] [DEBUG] [wx.py:205]  [self other]获取到新消息：机器人测试 - 这个很难
+引用  的消息 : 你还要给出院内已有的病号
+2025-06-30 13:18:58 [wxauto] [DEBUG] [msg.py:79]  content: 因为遍历不了群成员, length: 8
+2025-06-30 13:18:58 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 因为遍历不了群成员
+2025-06-30 13:19:13 [wxauto] [DEBUG] [msg.py:79]  content: fw, length: 10
+2025-06-30 13:19:13 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:19:14 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:\WorkPlace\pythonProject1\main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:\WorkPlace\pythonProject1\main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:19:14 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - fw
+2025-06-30 13:19:24 [wxauto] [DEBUG] [msg.py:79]  content: 别骂了, length: 8
+2025-06-30 13:19:24 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 别骂了
+2025-06-30 13:19:28 [wxauto] [DEBUG] [msg.py:79]  content: 那你是不是也查不到, length: 10
+2025-06-30 13:19:28 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 那你是不是也查不到
+2025-06-30 13:19:30 [wxauto] [DEBUG] [msg.py:79]  content: 谁退群, length: 10
+2025-06-30 13:19:30 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 谁退群
+2025-06-30 13:19:35 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描"郭一坤"分享的二维码加入群聊
+2025-06-30 13:19:41 [wxauto] [DEBUG] [msg.py:79]  content: 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复, length: 8
+2025-06-30 13:19:41 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。
+病号必须为自然数，且不能和已有病号重复
+2025-06-30 13:19:45 [wxauto] [DEBUG] [msg.py:79]  content: 退群管理员才知道, length: 8
+2025-06-30 13:19:45 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 退群管理员才知道
+2025-06-30 13:19:58 [wxauto] [DEBUG] [msg.py:79]  content: 这个不对, length: 8
+2025-06-30 13:19:58 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 这个不对
+2025-06-30 13:20:06 [wxauto] [DEBUG] [msg.py:79]  content: 没@出来, length: 8
+2025-06-30 13:20:06 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 没@出来
+2025-06-30 13:20:15 [wxauto] [DEBUG] [msg.py:79]  content: 好像是因为特殊符号, length: 8
+2025-06-30 13:20:15 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 好像是因为特殊符号
+2025-06-30 13:20:18 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 13:20:36 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 13:20:36 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 13:20:38 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 13:20:38 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 13:20:40 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 13:21:06 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 13:21:25 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 131, in test_group_message
+    user = invited_person(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 94, in invited_person
+    raise ValueError("无法从文本中提取邀请信息")
+ValueError: 无法从文本中提取邀请信息
+
+2025-06-30 13:21:27 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - "七月"通过扫描"郭一坤"分享的二维码加入群聊

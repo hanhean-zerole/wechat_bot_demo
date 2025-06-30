@@ -6,9 +6,9 @@ from wxauto import WeChat
 from wxauto.msgs import FriendMessage, TickleMessage, SystemMessage
 
 #GROUP_NAME="青鸟市第七人民医院"
-BOT_NAME="院内自助设施"
+#BOT_NAME="院内自助设施"
 GROUP_NAME="机器人测试"
-# BOT_NAME="韩和安"
+BOT_NAME="韩和安"
 
 def get_command(text):
     pattern = re.compile(rf'@{BOT_NAME} *')
@@ -133,7 +133,7 @@ def test_group_message(msg, chat):
         crazy_flag = random.randint(1, 5)
         if crazy_flag == 1:
             chat.SendMsg(msg=f"不给自己编号的，病号不是自然数的，跟已有病号重复的病人滚粗病院！(╯>д<)╯⁽˙³˙⁾", who=GROUP_NAME, at=user)
-        chat.SendMsg(msg=f"乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。\n病号必须为自然数，且不能和已有病号重复", who=GROUP_NAME, at=user)
+        chat.SendMsg(msg=f"乀(ˉεˉ乀)欢迎新病友入院，请在群昵称中备注自己的病号。\n病号必须为自然数，且不能和已有病号重复。", who=GROUP_NAME, at=user)
 
 
 if __name__ == '__main__':
