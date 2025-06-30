@@ -186,3 +186,156 @@ AttributeError: 'NoneType' object has no attribute 'group'
 2025-06-30 09:47:26 [wxauto] [DEBUG] [msg.py:79]  content: 可以更新了, length: 8
 2025-06-30 09:47:26 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 可以更新了
 2025-06-30 09:47:58 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 11:04:52 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:04:52 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 青鸟市第七人民医院, False, False, 0.5
+2025-06-30 11:04:54 [wxauto] [DEBUG] [main.py:179]  青鸟市第七人民医院 切换到聊天窗口: 青鸟市第七人民医院
+2025-06-30 11:04:54 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 青鸟市第七人民医院
+2025-06-30 11:04:55 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 青鸟市第七人民医院
+2025-06-30 11:05:05 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 11:05:32 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:05:33 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 11:05:35 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 11:05:35 [wxauto] [DEBUG] [main.py:181]  机器人测试 获取到已存在的子窗口: <wxauto - WeChatSubWnd object("机器人测试")>
+2025-06-30 11:06:20 [wxauto] [DEBUG] [msg.py:79]  content: @韩和安 帮助, length: 10
+2025-06-30 11:06:20 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:06:20 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @韩和安 帮助
+2025-06-30 11:06:28 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 病友你坏，我是院内的自动机器人，ID为韩和安，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。
+我目前支持的功能有：
+1.抽签，发送“@韩和安 抽签 A选项 B选项 C选项”试一试
+2.大狗叫，发送“@韩和安 大狗叫 任意一句话”，我会把这句话变成汪汪汪
+拍一拍我的芯片可能有惊喜哦（）
+引用  的消息 : @韩和安 帮助, length: 20
+2025-06-30 11:06:28 [wxauto] [DEBUG] [wx.py:205]  [self other]获取到新消息：机器人测试 - @院内自助设施 病友你坏，我是院内的自动机器人，ID为韩和安，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。
+我目前支持的功能有：
+1.抽签，发送“@韩和安 抽签 A选项 B选项 C选项”试一试
+2.大狗叫，发送“@韩和安 大狗叫 任意一句话”，我会把这句话变成汪汪汪
+拍一拍我的芯片可能有惊喜哦（）
+引用  的消息 : @韩和安 帮助
+2025-06-30 11:06:48 [wxauto] [DEBUG] [wx.py:205]  [tickle base]获取到新消息：机器人测试 - [1条]"李冠霖" 拍了拍我的头，别拍了人要傻了
+2025-06-30 11:06:52 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 75, in test_group_message
+    ret = IQ(msg)
+  File "H:/WorkPlace/pythonProject1/main.py", line 64, in IQ
+    user = match.group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+2025-06-30 11:07:21 [wxauto] [DEBUG] [msg.py:79]  content: 你怎么把自己当成机器人了, length: 10
+2025-06-30 11:07:21 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:07:21 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - 你怎么把自己当成机器人了
+2025-06-30 11:07:32 [wxauto] [DEBUG] [msg.py:79]  content: 切换账号很麻烦, length: 8
+2025-06-30 11:07:32 [wxauto] [DEBUG] [wx.py:205]  [self text]获取到新消息：机器人测试 - 切换账号很麻烦
+2025-06-30 11:08:51 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:08:51 [wxauto] [DEBUG] [wx.py:205]  [tickle base]获取到新消息：机器人测试 - [1条]我拍了拍 "院内自助设施" 的芯片，智慧＋1d6
+2025-06-30 11:08:55 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 11:37:41 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:37:41 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 11:37:43 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 11:37:43 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 11:37:43 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 11:38:22 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:38:22 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:38:22 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:38:22 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 91, in test_group_message
+    ans = get_at(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 17, in get_at
+    to_remove = "@"+{BOT_NAME}
+TypeError: can only concatenate str (not "set") to str
+
+2025-06-30 11:38:44 [wxauto] [DEBUG] [wx.py:339]  wxauto("天山") shutdown
+2025-06-30 11:38:46 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:38:46 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 11:38:48 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 11:38:48 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 11:38:48 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 11:38:54 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:38:54 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:38:54 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 91, in test_group_message
+    ans = get_at(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 17, in get_at
+    to_remove = "@"+{BOT_NAME}
+TypeError: can only concatenate str (not "set") to str
+
+2025-06-30 11:39:11 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:39:11 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:39:11 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:39:31 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 91, in test_group_message
+    ans = get_at(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 17, in get_at
+    to_remove = "@"+{BOT_NAME}
+TypeError: can only concatenate str (not "set") to str
+
+2025-06-30 11:40:00 [wxauto] [DEBUG] [wx.py:339]  wxauto("天山") shutdown
+2025-06-30 11:40:08 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:40:08 [wxauto] [DEBUG] [main.py:175]  机器人测试 获取到已存在的子窗口: <wxauto - WeChatSubWnd object("机器人测试")>
+2025-06-30 11:40:22 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:40:22 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:40:22 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:40:32 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 91, in test_group_message
+    ans = get_at(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 17, in get_at
+    to_remove = str("@"+{BOT_NAME})
+TypeError: can only concatenate str (not "set") to str
+
+2025-06-30 11:40:57 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:40:57 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:40:57 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:41:13 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 91, in test_group_message
+    ans = get_at(msg.content)
+  File "H:/WorkPlace/pythonProject1/main.py", line 17, in get_at
+    to_remove = str("@"+{BOT_NAME})
+TypeError: can only concatenate str (not "set") to str
+
+2025-06-30 11:41:16 [wxauto] [DEBUG] [wx.py:339]  wxauto("天山") shutdown
+2025-06-30 11:41:42 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 11:41:42 [wxauto] [DEBUG] [main.py:175]  机器人测试 获取到已存在的子窗口: <wxauto - WeChatSubWnd object("机器人测试")>
+2025-06-30 11:41:51 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 帮助, length: 10
+2025-06-30 11:41:51 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:41:51 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 帮助
+2025-06-30 11:42:14 [wxauto] [DEBUG] [msg.py:79]  content: @韩和安 病友你坏，我是院内的自动机器人，ID为院内自助设施，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。
+我目前支持的功能有：
+1.抽签，发送“@院内自助设施 抽签 A选项 B选项 C选项”试一试
+2.大狗叫，发送“@院内自助设施 大狗叫 任意一句话”，我会把这句话变成汪汪汪
+拍一拍我的芯片可能有惊喜哦（）
+引用  的消息 : @院内自助设施 帮助, length: 20
+2025-06-30 11:42:14 [wxauto] [DEBUG] [wx.py:205]  [self other]获取到新消息：机器人测试 - @韩和安 病友你坏，我是院内的自动机器人，ID为院内自助设施，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。
+我目前支持的功能有：
+1.抽签，发送“@院内自助设施 抽签 A选项 B选项 C选项”试一试
+2.大狗叫，发送“@院内自助设施 大狗叫 任意一句话”，我会把这句话变成汪汪汪
+拍一拍我的芯片可能有惊喜哦（）
+引用  的消息 : @院内自助设施 帮助
+2025-06-30 11:42:18 [wxauto] [DEBUG] [wx.py:205]  [tickle base]获取到新消息：机器人测试 - [1条]"韩和安" 拍了拍我的芯片，智慧＋1d6
+2025-06-30 11:42:18 [wxauto] [DEBUG] [wx.py:54]  监听消息回调发生错误：Traceback (most recent call last):
+  File "H:\anaconda\envs\wechat_bot\lib\site-packages\wxauto\wx.py", line 52, in _safe_callback
+    callback(msg, chat)
+  File "H:/WorkPlace/pythonProject1/main.py", line 81, in test_group_message
+    ret = IQ(msg)
+  File "H:/WorkPlace/pythonProject1/main.py", line 70, in IQ
+    user = match.group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+2025-06-30 11:43:17 [wxauto] [DEBUG] [msg.py:79]  content: @院内自助设施 大狗叫 人民是基石，将军是支柱, length: 10
+2025-06-30 11:43:17 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 11:43:17 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @院内自助设施 大狗叫 人民是基石，将军是支柱
+2025-06-30 11:44:00 [wxauto] [DEBUG] [msg.py:79]  content: @韩和安 汪汪汪汪汪，汪汪汪汪汪 
+引用  的消息 : @院内自助设施 大狗叫 人民是基石，将军是支柱, length: 20
+2025-06-30 11:44:00 [wxauto] [DEBUG] [wx.py:205]  [self other]获取到新消息：机器人测试 - @韩和安 汪汪汪汪汪，汪汪汪汪汪 
+引用  的消息 : @院内自助设施 大狗叫 人民是基石，将军是支柱
+2025-06-30 11:44:01 [wxauto] [DEBUG] [wx.py:205]  [tickle base]获取到新消息：机器人测试 - [1条]"韩和安" 拍了拍我的芯片，智慧＋1d6
+2025-06-30 11:46:47 [wxauto] [DEBUG] [wx.py:339]  wxauto("天山") shutdown
