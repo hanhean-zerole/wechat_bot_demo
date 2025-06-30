@@ -4,9 +4,9 @@ import regex
 import random
 from wxauto import WeChat
 from wxauto.msgs import FriendMessage,TickleMessage
-GROUP_NAME="青鸟市第七人民医院"
+#GROUP_NAME="青鸟市第七人民医院"
 BOT_NAME="院内自助设施"
-# GROUP_NAME="机器人测试"
+GROUP_NAME="机器人测试"
 # BOT_NAME="韩和安"
 
 def get_at(text):
@@ -14,12 +14,17 @@ def get_at(text):
     obj=pattern.match(text)
     if obj is None:
         return None
-    command=text.strip(f'@{BOT_NAME} ')
+    to_remove = str("@"+BOT_NAME)
+    if text.startswith(to_remove):
+        command=text[len(to_remove):].lstrip()
+    print(command)
     return command
 
 def command_process(text):
     text=str(text)
     argcs=text.split()
+    print(text)
+    print(argcs)
     if argcs[0]=="抽签":
         ans=chouqian(argcs)
     elif argcs[0] == "帮助":
@@ -60,6 +65,7 @@ def bark(strs):
 def IQ(msg):
     upIQ=random.randint(1,6)
     match = re.search(r'"([^"]*)" 拍了拍我的芯片，智慧\+1d6', msg.content)
+    print(match)
     # match = re.search(r'"([^"]*)" 拍了拍我.*', msg.content)
     user = match.group(1)
     flag = random.randint(1, 10)
