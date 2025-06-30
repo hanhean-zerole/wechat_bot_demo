@@ -1,0 +1,16 @@
+2025-06-29 11:52:31.761 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:31.784 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.137 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.164 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.511 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.527 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.872 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:32.888 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:33.233 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:33.246 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:33.591 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:33.613 chatbox.py[62] _activate_editbox -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 11:52:33.965 chatbox.py[156] send_text -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2025-06-29 13:47:58.993 sessionbox.py[243] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-06-29 18:52:41.666 sessionbox.py[243] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-06-29 18:55:17.671 sessionbox.py[243] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}

@@ -1,0 +1,22 @@
+2025-06-30 08:14:02 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 08:14:02 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 08:14:05 [wxauto] [DEBUG] [sessionbox.py:123]  机器人测试 完整匹配
+2025-06-30 08:14:05 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 08:14:05 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 08:14:06 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 08:14:16 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 08:14:18 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 08:14:18 [wxauto] [DEBUG] [sessionbox.py:63]  切换聊天窗口: 机器人测试, False, False, 0.5
+2025-06-30 08:14:20 [wxauto] [DEBUG] [main.py:179]  机器人测试 切换到聊天窗口: 机器人测试
+2025-06-30 08:14:20 [wxauto] [DEBUG] [sessionbox.py:147]  打开独立窗口: 机器人测试
+2025-06-30 08:14:22 [wxauto] [DEBUG] [sessionbox.py:151]  找到会话: 机器人测试
+2025-06-30 08:15:42 [wxauto] [DEBUG] [msg.py:79]  content: @韩和安 测试, length: 10
+2025-06-30 08:15:42 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 08:15:42 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @韩和安 测试
+2025-06-30 08:16:34 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
+2025-06-30 08:16:41 [wxauto] [DEBUG] [wx.py:31]  开始监听
+2025-06-30 08:16:41 [wxauto] [DEBUG] [main.py:175]  机器人测试 获取到已存在的子窗口: <wxauto - WeChatSubWnd object("机器人测试")>
+2025-06-30 08:16:56 [wxauto] [DEBUG] [msg.py:79]  content: @韩和安 测试, length: 10
+2025-06-30 08:16:56 [wxauto] [DEBUG] [wx.py:205]  [system base]获取到新消息：机器人测试 - 以下为新消息
+2025-06-30 08:16:56 [wxauto] [DEBUG] [wx.py:205]  [friend text]获取到新消息：机器人测试 - @韩和安 测试
+2025-06-30 08:17:34 [wxauto] [DEBUG] [wx.py:339]  wxauto("韩和安") shutdown
