@@ -41,7 +41,7 @@ def command_process(text, chat):
     if argcs[0]=="抽签":
         ans= nmtools.chouqian(argcs)
     elif argcs[0] == "帮助":
-        ans = help()
+        ans = nmtools.help()
     elif argcs[0] == "大狗叫":
         ans = nmtools.bark(argcs)
     elif argcs[0] == "我的图图呢":
