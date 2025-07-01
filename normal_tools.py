@@ -1,10 +1,9 @@
 import os
 import random
 import re
-
 import regex
 
-from General import GROUP_NAME, BOT_NAME, PIXIV_IMG, be_crazy
+from General import GROUP_NAME, BOT_NAME, PIXIV_IMG, be_crazy,rate_limiter
 
 
 def help():
@@ -68,6 +67,7 @@ def invited_person(text):
         raise ValueError("未知的邀请信息格式")
 
 
+@rate_limiter(60)
 def show_Pixiv(chat):
         files = []
         for dirpath, _, filenames in os.walk(PIXIV_IMG):

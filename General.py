@@ -1,4 +1,6 @@
 import random
+import time
+from functools import wraps
 
 GROUP_NAME= "机器人测试"
 BOT_NAME="韩和安"
@@ -14,3 +16,27 @@ def be_crazy(num):
     if crazy_flag == 1:
         return True
     return False
+
+
+####################################################################
+def rate_limiter(min_interval):  # 以秒为单位，限制最短调用间隔的计时器
+    def decorator(func):
+        last_call = 0
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            nonlocal last_call
+            current_time = time.time()
+            elapsed = current_time - last_call
+            if elapsed < min_interval:
+                if be_crazy(4):
+                    if be_crazy(2):
+                        return f"急急急急"
+                    return f"我知道你很急，但你先别急"
+                return f"该功能被调用的太频繁了！\n距离上次调用仅 {elapsed:.2f} 秒 (需要等待 {min_interval} 秒"
+            result = func(*args, **kwargs)
+            last_call = time.time()
+            return result
+        return wrapper
+    return decorator
+
+
