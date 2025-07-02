@@ -81,6 +81,7 @@ def show_Pixiv(chat):
         file = random.choice(files)
         id = re.search('([0-9]+)\.(jpg|png)', file).group(1)
         chat.SendFiles(filepath=file, who=GROUP_NAME)
+        os.remove(file)
         return f"pid={id}"
 
 
