@@ -1,13 +1,14 @@
 import threading
 import time
-import re
 import random
 import schedule
+
+import Vote
 import normal_tools as nmtools
 from wxauto import WeChat
 from wxauto.msgs import FriendMessage, TickleMessage, SystemMessage
 
-from General import GROUP_NAME, BOT_NAME, be_crazy
+from General import GROUP_NAME, BOT_NAME, be_crazy, get_command
 from get_pixiv import download_pixiv_recommend
 
 ###########################################################################设置定时任务
@@ -23,20 +24,8 @@ def run_scheduler():
             print(f"Scheduler error: {e}", exc_info=True)
         time.sleep(1)
 
-def get_command(text):
-    pattern = re.compile(rf'@{BOT_NAME} *')
-    obj=pattern.match(text)
-    if obj is None:
-        return None
-    to_remove = str("@" + BOT_NAME)
-    if text.startswith(to_remove):
-        command=text[len(to_remove):].lstrip()
-        return command
 
-
-def command_process(text, chat):
-    text=str(text)
-    argcs=text.split()
+def command_process(argcs, chat, sender):
     print(argcs)
     if argcs[0]=="抽签":
         ans= nmtools.chouqian(argcs)
@@ -46,6 +35,8 @@ def command_process(text, chat):
         ans = nmtools.bark(argcs)
     elif argcs[0] == "我的图图呢":
         ans = nmtools.show_Pixiv(chat)
+    elif argcs[0] == "投票":
+        ans = Vote.vote_main(argcs, chat, sender)
     else:
         ans = f"病友你坏，如果你不知道怎么使用我，可以发送“@{BOT_NAME} 帮助”"
     return ans
@@ -72,7 +63,7 @@ def test_group_message(msg, chat):
         ans = get_command(msg.content)
         if ans is None:
             return
-        ret=command_process(ans,chat)
+        ret=command_process(ans, chat, msg.sender)
         time.sleep(0.7)
         msg.quote(ret, msg.sender)
 ############################################################################

@@ -1,4 +1,5 @@
 import random
+import re
 import time
 from functools import wraps
 
@@ -40,3 +41,14 @@ def rate_limiter(min_interval):  # 以秒为单位，限制最短调用间隔的
     return decorator
 
 
+def get_command(text):
+    pattern = re.compile(rf'@{BOT_NAME} *')
+    obj=pattern.match(text)
+    if obj is None:
+        return None
+    name_to_remove = str("@" + BOT_NAME)
+    if text.startswith(name_to_remove):
+        command=text[len(name_to_remove):].lstrip()
+        command = str(command)
+        argcs = command.split()
+        return argcs
