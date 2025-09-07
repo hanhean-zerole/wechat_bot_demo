@@ -16,7 +16,7 @@ def help():
            f"2.大狗叫，发送“@{BOT_NAME}    大狗叫    任意一句话”，我会把这句话变成汪汪汪\n" \
            f"3.展示图图，发送“@{BOT_NAME}    我的图图呢”，会给大家来一点想看的东西\n" \
            f"4.投票，发送“@{BOT_NAME}    投票”以获取详细信息\n" \
-           f"4.投票，发送“@{BOT_NAME}    对话      对话内容”可以试试跟我聊天！"\
+           f"5.聊天，发送“@{BOT_NAME}    对话      对话内容”可以试试跟我聊天！\n"\
            f"拍一拍我的芯片可能有惊喜哦（）"
 
 
@@ -46,7 +46,7 @@ def bark(strs):
 
 def IQ(msg):
     upIQ=random.randint(1,6)
-    match = re.search(r'"([^"]*)" 拍了拍我的芯片，智慧\+1d6', msg.content)
+    match = re.search(r'"([^"]*)" 拍了拍 "院内自助设施" 的芯片，智慧\+1d6', msg.content)
     user = match.group(1)
     if be_crazy(10):
         return {"text": f"在拍芯片时用力过猛，被电到了，智慧-{upIQ}", "user": user, "flag": True}
