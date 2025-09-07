@@ -2,19 +2,21 @@ import os
 import random
 import re
 import regex
+import chat_with_llm
 
-from General import GROUP_NAME, BOT_NAME, PIXIV_IMG, be_crazy,rate_limiter
+from General import GROUP_NAME, BOT_NAME, PIXIV_IMG, be_crazy, rate_limiter, daily_limiter
 
 
 def help():
     if be_crazy(5):
         return f"你这有机体好笨( ˃ ⤙ ˂)"
-    return f"病友你坏，我是院内的机仆，ID为{BOT_NAME}，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。\n" \
+    return f"主人你坏，我是院内的机仆，ID为{BOT_NAME}，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系院长或213号模范病人。\n" \
            f"我目前支持的功能有：\n" \
            f"1.抽签，发送“@{BOT_NAME}    抽签    A选项    B选项    C选项”试一试\n" \
            f"2.大狗叫，发送“@{BOT_NAME}    大狗叫    任意一句话”，我会把这句话变成汪汪汪\n" \
            f"3.展示图图，发送“@{BOT_NAME}    我的图图呢”，会给大家来一点想看的东西\n" \
            f"4.投票，发送“@{BOT_NAME}    投票”以获取详细信息\n" \
+           f"4.投票，发送“@{BOT_NAME}    对话      对话内容”可以试试跟我聊天！"\
            f"拍一拍我的芯片可能有惊喜哦（）"
 
 
@@ -50,6 +52,11 @@ def IQ(msg):
         return {"text": f"在拍芯片时用力过猛，被电到了，智慧-{upIQ}", "user": user, "flag": True}
     return {"text": f"1d6={upIQ},智慧＋{upIQ}", "user": user, "flag": False}
 
+@rate_limiter(5)
+@daily_limiter(220)
+def chat(content):
+    res = chat_with_llm.get_LLM_response(content)
+    return res
 
 def invited_person(text):
     """

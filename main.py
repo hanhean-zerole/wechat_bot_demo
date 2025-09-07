@@ -37,6 +37,8 @@ def command_process(argcs, chat, sender):
         ans = nmtools.show_Pixiv(chat)
     elif argcs[0] == "投票":
         ans = Vote.vote_main(argcs, chat, sender)
+    elif argcs[0] == "对话":
+        ans = nmtools.chat(argcs)
     else:
         ans = f"病友你坏，如果你不知道怎么使用我，可以发送“@{BOT_NAME} 帮助”"
     return ans
