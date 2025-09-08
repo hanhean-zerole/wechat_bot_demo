@@ -6,14 +6,25 @@ import shelve
 
 from functools import wraps
 
-GROUP_NAME= "机器人测试"
-BOT_NAME="韩和安"
-#GROUP_NAME="青鸟市第七人民医院"
-#BOT_NAME="院内自助设施"
+GROUP_NAME = "机器人测试"
+BOT_NAME = "韩和安"
+# GROUP_NAME="青鸟市第七人民医院"
+# BOT_NAME="院内自助设施"
 
 
 PIXIV_IMG = './Pixiv_imgs/'
 COUNTER_FILE = "call_counters.db"
+
+TIPS = \
+    f"主人你坏，我是院内的机仆，ID为{BOT_NAME}，可以代理院长完成一些自动化工作，如果我没有按照预期运行，请联系我的制造者213号模范病人。\n" \
+    f"我目前支持的功能有：\n" \
+    f"1.抽签，发送“@{BOT_NAME}    抽签    A选项    B选项    C选项”试一试\n" \
+    f"2.大狗叫，发送“@{BOT_NAME}    大狗叫    任意一句话”，我会把这句话变成汪汪汪\n" \
+    f"3.展示图图，发送“@{BOT_NAME}    我的图图呢”，会给大家来一点想看的东西\n" \
+    f"4.投票，发送“@{BOT_NAME}    投票”以获取详细信息\n" \
+    f"5.聊天，发送“@{BOT_NAME}    对话      对话内容”可以试试跟我聊天！\n"\
+    f"拍一拍我的芯片可能有惊喜哦（）"
+
 
 def be_crazy(num):
     crazy_flag = random.randint(1, num)
@@ -26,6 +37,7 @@ def be_crazy(num):
 def rate_limiter(min_interval):  # 以秒为单位，限制最短调用间隔的计时器
     def decorator(func):
         last_call = 0
+
         @wraps(func)
         def wrapper(*args, **kwargs):
             nonlocal last_call
@@ -40,7 +52,9 @@ def rate_limiter(min_interval):  # 以秒为单位，限制最短调用间隔的
             result = func(*args, **kwargs)
             last_call = time.time()
             return result
+
         return wrapper
+
     return decorator
 
 
@@ -68,18 +82,20 @@ def daily_limiter(max_calls):  # 一个每日调用次数限制的装饰器
             # 执行原始函数
             result = func(*args, **kwargs)
             return result
+
         return wrapper
+
     return decorator
 
 
 def get_command(text):
     pattern = re.compile(rf'@{BOT_NAME} *')
-    obj=pattern.match(text)
+    obj = pattern.match(text)
     if obj is None:
         return None
     name_to_remove = str("@" + BOT_NAME)
     if text.startswith(name_to_remove):
-        command=text[len(name_to_remove):].lstrip()
+        command = text[len(name_to_remove):].lstrip()
         command = str(command)
         argcs = command.split()
         return argcs

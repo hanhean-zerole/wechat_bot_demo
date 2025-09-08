@@ -5,15 +5,20 @@ import schedule
 
 import Vote
 import normal_tools as nmtools
+import chat_with_llm
 from wxauto import WeChat
 from wxauto.msgs import FriendMessage, TickleMessage, SystemMessage
 
 from General import GROUP_NAME, BOT_NAME, be_crazy, get_command
+
 from get_pixiv import download_pixiv_recommend
 
 ###########################################################################设置定时任务
 schedule.every().day.at("04:00").do(download_pixiv_recommend)
 
+
+###########################################################################初始化
+llmchat = chat_with_llm.LLMCHAT()
 
 ###########################################################################
 def run_scheduler():
@@ -21,11 +26,11 @@ def run_scheduler():
         try:
             schedule.run_pending()
         except Exception as e:
-            print(f"Scheduler error: {e}", exc_info=True)
+            print(f"Scheduler error: {e}")
         time.sleep(1)
 
 
-def command_process(argcs, chat, sender):
+def command_process(argcs, wxchat, sender):
     print(argcs)
     if argcs[0]=="抽签":
         ans= nmtools.chouqian(argcs)
@@ -34,11 +39,11 @@ def command_process(argcs, chat, sender):
     elif argcs[0] == "大狗叫":
         ans = nmtools.bark(argcs)
     elif argcs[0] == "我的图图呢":
-        ans = nmtools.show_Pixiv(chat)
+        ans = nmtools.show_Pixiv(wxchat)
     elif argcs[0] == "投票":
-        ans = Vote.vote_main(argcs, chat, sender)
+        ans = Vote.vote_main(argcs, wxchat, sender)
     elif argcs[0] == "对话":
-        ans = nmtools.chat(argcs)
+        ans = nmtools.llm_chating(llmchat=llmchat, content=''.join(argcs[1:]), sender=sender)
     else:
         ans = f"病友你坏，如果你不知道怎么使用我，可以发送“@{BOT_NAME} 帮助”"
     return ans
@@ -49,7 +54,7 @@ def test_group_message(msg, chat):
     if msg.attr not in attr_list:
         return
     ##################################################################
-    if isinstance(msg,TickleMessage):#拍一拍加智慧
+    if isinstance(msg, TickleMessage):  # 拍一拍加智慧
         ret = nmtools.IQ(msg)
         time.sleep(0.7)
         if be_crazy(20):
@@ -65,7 +70,7 @@ def test_group_message(msg, chat):
         ans = get_command(msg.content)
         if ans is None:
             return
-        ret=command_process(ans, chat, msg.sender)
+        ret = command_process(ans, chat, msg.sender)
         time.sleep(0.7)
         msg.quote(ret, msg.sender)
 ############################################################################
@@ -81,6 +86,9 @@ if __name__ == '__main__':
     scheduler_thread = threading.Thread(target=run_scheduler)
     scheduler_thread.daemon = True
     scheduler_thread.start()
+
+
+
     wx = WeChat()
     wx.AddListenChat(nickname=GROUP_NAME, callback=test_group_message)
     wx.KeepRunning()

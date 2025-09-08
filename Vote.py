@@ -11,16 +11,16 @@ VOTE_LIST = []
 VOTE_JSON_PATH = "./vote_json/"
 
 
-def vote_main(argcs, chat, sender):
+def vote_main(argcs, wxchat, sender):
     ans = ''
     if len(argcs) < 2:
         return vote_help()
     if argcs[1] == "创建投票":  # 投票名称，时间，选项A,选项B,选项C……
-        ans = add_Vote(argcs=argcs, chat=chat)
+        ans = add_Vote(argcs=argcs, wxchat=wxchat)
     elif argcs[1] == "查看投票":  # 返回一个列表
-        ans = list_vote(argcs, chat)
+        ans = list_vote(argcs, wxchat)
     elif argcs[1] == "进行投票":  # 不重复投票，
-        ans = voting(argcs, chat, sender)
+        ans = voting(argcs, wxchat, sender)
     else:
         ans = vote_help()
     return ans
@@ -54,8 +54,8 @@ def remove_vote(vote_name, chat):
             chat.SendMsg(msg=result, who=GROUP_NAME)
 
 @rate_limiter(300)
-def add_Vote(argcs, chat):
-    tempvote = Vote(argcs=argcs, chat=chat)
+def add_Vote(argcs, wxchat):
+    tempvote = Vote(argcs=argcs, wxchat=wxchat)
     if isinstance(tempvote,Vote):
         for vote in VOTE_LIST:
             if tempvote.name == vote.name:
@@ -68,7 +68,7 @@ def add_Vote(argcs, chat):
         return "创建投票失败"
 
 
-def list_vote(argcs, chat):  # 无参数返回列表与时间，有参数返回投票信息
+def list_vote(argcs, wxchat):  # 无参数返回列表与时间，有参数返回投票信息
     ret = ""
     if len(argcs) == 2:
         ret += f"当前进行的投票有：\n"
@@ -87,7 +87,7 @@ def list_vote(argcs, chat):  # 无参数返回列表与时间，有参数返回�
     return ret
 
 
-def voting(argcs, chat, sender):
+def voting(argcs, wxchat, sender):
     ret = ''
     if len(argcs) == 4:
         for vote in VOTE_LIST:
