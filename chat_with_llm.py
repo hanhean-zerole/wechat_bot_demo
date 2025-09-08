@@ -2,7 +2,7 @@
 from google import genai
 from google.genai import types
 
-from General import BOT_NAME,TIPS
+from General import TIPS
 
 CHATTING_RULE = \
     "你会听到不同角色的所说的话，你所接受到的信息格式如下：\n"\
